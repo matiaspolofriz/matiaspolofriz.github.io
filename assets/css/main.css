@@ -200,19 +200,32 @@ textarea {
   line-height: 1.75em;
 }
 
+.btn {
+  font-size: 12px;
+  border-radius: 0.2rem;
+  padding: 0.05rem;
+  display: inline-block;
+  width: 80px;
+  text-align: center;
+  text-decoration: none; /* la linea de los enlaces las sacamos */
+  color: white;
+  background-color: rgb(167, 171, 167);
+}
+
 a {
   -moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   -webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   -ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  transition: all 0.5s ease-out;
   border-bottom: dotted 1px;
-  color: #49bf9d;
   text-decoration: none;
 }
 
 a:hover {
+  opacity: 0.5;
   border-bottom-color: transparent;
-  color: #49bf9d !important;
+  color: white !important;
+  background-color: black;
   text-decoration: none;
 }
 
@@ -2577,8 +2590,8 @@ input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover,
 .button:hover {
-  border-color: #49bf9d;
-  color: #49bf9d !important;
+  border-color: gray;
+  color: rgb(177, 173, 173) !important;
 }
 
 input[type="submit"]:active,
@@ -2586,8 +2599,8 @@ input[type="reset"]:active,
 input[type="button"]:active,
 .button:active {
   background-color: rgba(73, 191, 157, 0.1);
-  border-color: #49bf9d;
-  color: #49bf9d !important;
+  border-color: black;
+  color: black !important;
 }
 
 input[type="submit"].icon,
@@ -2630,8 +2643,8 @@ input[type="submit"].primary,
 input[type="reset"].primary,
 input[type="button"].primary,
 .button.primary {
-  background-color: #49bf9d;
-  border-color: #49bf9d;
+  background-color: black;
+  border-color: black;
   color: #ffffff !important;
 }
 
