@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>DATA CLEANING (SQL)</title>
+  <meta name="description" content="Welcome to my Portfolio, I'm Matias Polo Friz, Data Analyst">
+  <link rel="icon" href="images/mp-favicon.ico" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+</head>
+
+<body class="is-preload">
+
+  <!-- Header -->
+  <header id="header">
+    <div class="inner">
+      <a href="#" class="image avatar"><img src="images/foto-perfil1.jpeg" alt="" /></a>
+      <h1><strong>I am Polo Friz, Matias</strong>. Data Analytics.<br />
+        SQL | Python | Power BI | Tableau<br />
+        Pandas | Numpy<br />
+      </h1>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <div id="main">
+
+    <!-- Two -->
+    <section id="two">
+      <h2><img class="iconos" src="images/icono-sql.svg" alt="SQL"> DATA CLEANING (SQL)</h2>
+
+      <!-- MAIN TEXT -->
+      <h2>About this project</h2>
+      <h3> Through the Below SQL queries, the housing
+        data was thoroughly cleaned, standardized, and prepared for further analysis
+        or integration into other systems. The project demonstrates proficiency in data cleaning techniques using SQL
+        and
+        ensures the dataset's quality and consistency for downstream processes or analysis.</h3>
+
+
+
+      <!-- TEXT 1 -->
+      <h4>1 - Standardize Date Format:</h4>
+
+      <li>Used SQL CONVERT function to standardize the date format in the SaleDate column.</li>
+      <li>Added a new column SaleDateNew to store the standardized dates.</li>
+
+      <!-- IMAGE  1-->
+      <div class="row">
+        <article class="col-6 col-12-xsmall work-item">
+          <a href="images/9 - DataCleaning-SQL/image1.png" class="image fit thumb"><img
+              src="images/9 - DataCleaning-SQL/image1.png" alt="" /></a>
+        </article>
+      </div>
+
+
+      <!-- TEXT 2 -->
+      <h4>2 - Populate Property Address Data:</h4>
+
+      <li>Filled missing property addresses by joining the dataset with itself based on ParcelID and copying the
+        non-null property
+        addresses.</li>
+
+      <!-- IMAGE  2-->
+      <div class="row">
+        <article class="col-6 col-12-xsmall work-item">
+          <a href="images/9 - DataCleaning-SQL/image2.png" class="image fit thumb"><img
+              src="images/9 - DataCleaning-SQL/image2.png" alt="" /></a>
+        </article>
+      </div>
+
+
+      <!-- TEXT 3 -->
+      <h4>3 - Break Address into Individual Columns:</h4>
+
+      <li>Split the PropertyAddress column into separate columns for PropertyNumAddress, PropertyCity, and
+        PropertyState.</li>
+      <li>Utilized SQL string manipulation functions such as SUBSTRING and CHARINDEX to extract the required
+        information.</li>
+
+      <!-- IMAGE  3-->
+      <div class="row">
+        <article class="col-6 col-12-xsmall work-item">
+          <a href="images/9 - DataCleaning-SQL/image3.png" class="image fit thumb"><img
+              src="images/9 - DataCleaning-SQL/image3.png" alt="" /></a>
+        </article>
+      </div>
+
+
+      <!-- TEXT 4 -->
+      <h4>4 - Break Owner Address into Individual Columns:</h4>
+
+      <li>Similar to the property address, split the OwnerAddress column into OwnerNumAddress, OwnerCity, and OwnerState
+        columns.</li>
+      <li>Used the PARSENAME function to parse the address components.</li>
+
+      <!-- IMAGE  4-->
+      <div class="row">
+        <article class="col-6 col-12-xsmall work-item">
+          <a href="images/9 - DataCleaning-SQL/image4.png" class="image fit thumb"><img
+              src="images/9 - DataCleaning-SQL/image4.png" alt="" /></a>
+        </article>
+      </div>
+
+
+      <!-- TEXT 5 -->
+      <h4>5 - Change Y and N to Yes and No:</h4>
+
+      <li>Converted 'Y' and 'N' values in the SoldAsVacant column to 'Yes' and 'No', respectively, for better
+        readability.</li>
+      <li>Implemented using SQL UPDATE statements with conditional logic.</li>
+
+      <!-- IMAGE  5-->
+      <div class="row">
+        <article class="col-6 col-12-xsmall work-item">
+          <a href="images/9 - DataCleaning-SQL/image5.png" class="image fit thumb"><img
+              src="images/9 - DataCleaning-SQL/image5.png" alt="" /></a>
+        </article>
+      </div>
+
+
+      <!-- TEXT 6 -->
+      <h4>6 - Remove Duplicates:</h4>
+
+      <li>Eliminated duplicate records based on specific columns (ParcelID, PropertyAddress, SalePrice, SaleDate,
+        LegalReference)
+        using a common table expression (CTE) and the ROW_NUMBER() window function.</li>
+      <li>Deleted duplicate records, keeping only one occurrence of each unique combination.</li>
+
+      <!-- IMAGE  6-->
+      <div class="row">
+        <article class="col-6 col-12-xsmall work-item">
+          <a href="images/9 - DataCleaning-SQL/image6.png" class="image fit thumb"><img
+              src="images/9 - DataCleaning-SQL/image6.png" alt="" /></a>
+        </article>
+      </div>
+
+
+      <!-- TEXT 7 -->
+      <h4>7 - Delete Unused Columns:</h4>
+
+      <li>Removed unnecessary columns (SaleDate, PropertyAddress, OwnerAddress) from the dataset to streamline the data
+        and
+        improve clarity.</li>
+      <li>Employed the SQL ALTER TABLE statement with the DROP COLUMN clause to delete the specified columns.</li>
+
+      <!-- IMAGE  7-->
+      <div class="row">
+        <article class="col-6 col-12-xsmall work-item">
+          <a href="images/9 - DataCleaning-SQL/image7.png" class="image fit thumb"><img
+              src="images/9 - DataCleaning-SQL/image7.png" alt="" /></a>
+        </article>
+      </div>
+
+
+    </section>
+
+
+
+    <!-- Three -->
+    <section id="three">
+      <h2>Get In Touch</h2>
+
+      <div class="row">
+
+        <div class="col-4 col-12-small">
+          <ul class="labeled-icons">
+            <li>
+              <h3 class="icon solid fa-home"><span class="label">Address</span></h3>
+              Barcelona, Spain
+            </li>
+            <li>
+              <h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+              +54 91959980
+            </li>
+            <li>
+              <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+              <a href="#">polofrizmatias@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="inner">
+      <ul class="icons">
+        <li><a href="https://twitter.com/matiaspolofriz" class="icon brands fa-twitter" target="_blank"><span
+              class="label">Twitter</span></a></li>
+
+        <li><a href="https://github.com/matiaspolofriz" class="icon brands fa-github" target="_blank"><span
+              class="label">Github</span></a></li>
+
+        <li><a href="https://www.linkedin.com/in/matiaspolofriz/" class="icon brands fa-linkedin" target="_blank"><span
+              class="label">Linkedin</span></a></li>
+
+        <!--  <li><a href="polofrizmatias@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+          -->
+      </ul>
+
+      <ul class="copyright">
+        <li>&copy; Polo Friz, Matias</li>
+        <li>Design: <img src="images/mp-48.png" alt="" class="mp-img" />
+        </li>
+      </ul>
+
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.poptrox.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
