@@ -3,7 +3,7 @@
 <html>
 
 <head>
-  <title>DATA CLEANING (SQL)</title>
+  <title>PROFESSIONAL SURVEY (POWER BI)</title>
   <meta name="description" content="Welcome to my Portfolio, I'm Matias Polo Friz, Data Analyst">
   <link rel="icon" href="images/mp-favicon.ico" />
   <meta charset="utf-8" />
@@ -30,130 +30,54 @@
 
     <!-- Two -->
     <section id="two">
-      <h2><img class="iconos" src="images/icono-sql.svg" alt="SQL"> DATA CLEANING (SQL)</h2>
+      <h2><img class="iconos" src="images/icono-powerbi.svg" alt="SQL">PROFESSIONAL SURVEY (POWER BI)</h2>
 
       <!-- MAIN TEXT -->
       <h2>About this project</h2>
-      <h3> Through the Below SQL queries, the housing
-        data was thoroughly cleaned, standardized, and prepared for further analysis
-        or integration into other systems. The project demonstrates proficiency in data cleaning techniques using SQL
-        and
-        ensures the dataset's quality and consistency for downstream processes or analysis.</h3>
-
+      <h3>In this project, we delve into insights extracted from a survey conducted by Alex Freberg on job roles in the
+        field of
+        data analytics.
+        <br>
+        The survey data, collected from individuals worldwide, provides valuable insights into various
+        aspects
+        of careers in data analytics, including job titles, career transitions, salary trends, job satisfaction, and
+        more.
+        <br>
+        Through this analysis, we aim to uncover trends and patterns that can inform strategic decision-making for
+        professionals
+        and organizations in the data analytics industry.
+      </h3>
+      <br>
+      <br>
 
 
       <!-- TEXT 1 -->
-      <h4>1 - Standardize Date Format:</h4>
+      <h4>Data Transformation:</h4>
 
-      <li>Used SQL CONVERT function to standardize the date format in the SaleDate column.</li>
-      <li>Added a new column SaleDateNew to store the standardized dates.</li>
+      <li>The raw survey data underwent extensive transformation using Power Query in Power BI. Initially, unnecessary
+        columns
+        such as Browser, OS, City, Country, and Referrer were removed to streamline the dataset. Subsequently, the data
+        was
+        cleansed using the split column function to extract relevant information and standardize responses.
+        <br>
+        For instance, salary ranges were averaged to provide a clearer understanding of income distribution among
+        respondents.
+        <br>
+        Additionally,
+        responses containing 'Other' options were refined to categorize them into predefined options, enhancing data
+        consistency
+        and analysis accuracy.
+      </li>
+      <br>
 
       <!-- IMAGE  1-->
       <div class="row">
         <article class="col-6 col-12-xsmall work-item">
-          <a href="images/9 - DataCleaning-SQL/image1.png" class="image fit thumb"><img
-              src="images/9 - DataCleaning-SQL/image1.png" alt="" /></a>
+          <a href="images/powerbi-survey.png" class="image fit thumb"><img src="images/powerbi-survey.png" alt="" /></a>
         </article>
       </div>
 
 
-      <!-- TEXT 2 -->
-      <h4>2 - Populate Property Address Data:</h4>
-
-      <li>Filled missing property addresses by joining the dataset with itself based on ParcelID and copying the
-        non-null property
-        addresses.</li>
-
-      <!-- IMAGE  2-->
-      <div class="row">
-        <article class="col-6 col-12-xsmall work-item">
-          <a href="images/9 - DataCleaning-SQL/image2.png" class="image fit thumb"><img
-              src="images/9 - DataCleaning-SQL/image2.png" alt="" /></a>
-        </article>
-      </div>
-
-
-      <!-- TEXT 3 -->
-      <h4>3 - Break Address into Individual Columns:</h4>
-
-      <li>Split the PropertyAddress column into separate columns for PropertyNumAddress, PropertyCity, and
-        PropertyState.</li>
-      <li>Utilized SQL string manipulation functions such as SUBSTRING and CHARINDEX to extract the required
-        information.</li>
-
-      <!-- IMAGE  3-->
-      <div class="row">
-        <article class="col-6 col-12-xsmall work-item">
-          <a href="images/9 - DataCleaning-SQL/image3.png" class="image fit thumb"><img
-              src="images/9 - DataCleaning-SQL/image3.png" alt="" /></a>
-        </article>
-      </div>
-
-
-      <!-- TEXT 4 -->
-      <h4>4 - Break Owner Address into Individual Columns:</h4>
-
-      <li>Similar to the property address, split the OwnerAddress column into OwnerNumAddress, OwnerCity, and OwnerState
-        columns.</li>
-      <li>Used the PARSENAME function to parse the address components.</li>
-
-      <!-- IMAGE  4-->
-      <div class="row">
-        <article class="col-6 col-12-xsmall work-item">
-          <a href="images/9 - DataCleaning-SQL/image4.png" class="image fit thumb"><img
-              src="images/9 - DataCleaning-SQL/image4.png" alt="" /></a>
-        </article>
-      </div>
-
-
-      <!-- TEXT 5 -->
-      <h4>5 - Change Y and N to Yes and No:</h4>
-
-      <li>Converted 'Y' and 'N' values in the SoldAsVacant column to 'Yes' and 'No', respectively, for better
-        readability.</li>
-      <li>Implemented using SQL UPDATE statements with conditional logic.</li>
-
-      <!-- IMAGE  5-->
-      <div class="row">
-        <article class="col-6 col-12-xsmall work-item">
-          <a href="images/9 - DataCleaning-SQL/image5.png" class="image fit thumb"><img
-              src="images/9 - DataCleaning-SQL/image5.png" alt="" /></a>
-        </article>
-      </div>
-
-
-      <!-- TEXT 6 -->
-      <h4>6 - Remove Duplicates:</h4>
-
-      <li>Eliminated duplicate records based on specific columns (ParcelID, PropertyAddress, SalePrice, SaleDate,
-        LegalReference)
-        using a common table expression (CTE) and the ROW_NUMBER() window function.</li>
-      <li>Deleted duplicate records, keeping only one occurrence of each unique combination.</li>
-
-      <!-- IMAGE  6-->
-      <div class="row">
-        <article class="col-6 col-12-xsmall work-item">
-          <a href="images/9 - DataCleaning-SQL/image6.png" class="image fit thumb"><img
-              src="images/9 - DataCleaning-SQL/image6.png" alt="" /></a>
-        </article>
-      </div>
-
-
-      <!-- TEXT 7 -->
-      <h4>7 - Delete Unused Columns:</h4>
-
-      <li>Removed unnecessary columns (SaleDate, PropertyAddress, OwnerAddress) from the dataset to streamline the data
-        and
-        improve clarity.</li>
-      <li>Employed the SQL ALTER TABLE statement with the DROP COLUMN clause to delete the specified columns.</li>
-
-      <!-- IMAGE  7-->
-      <div class="row">
-        <article class="col-6 col-12-xsmall work-item">
-          <a href="images/9 - DataCleaning-SQL/image7.png" class="image fit thumb"><img
-              src="images/9 - DataCleaning-SQL/image7.png" alt="" /></a>
-        </article>
-      </div>
 
 
     </section>
